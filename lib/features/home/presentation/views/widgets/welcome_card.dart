@@ -24,7 +24,7 @@ class _WelcomeCardState extends State<WelcomeCard> {
   Widget build(BuildContext context) {
     return TweenAnimationBuilder(
       tween: Tween<double>(begin: 0, end: _startAnimation ? 1 : 0),
-      duration: const Duration(milliseconds: 800),
+      duration: const Duration(milliseconds: 600),
       curve: Curves.easeInOut,
       builder: (BuildContext context, double val, Widget? child) {
         return Padding(

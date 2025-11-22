@@ -13,7 +13,7 @@ class InteractiveApp extends StatelessWidget {
     return MaterialApp(
       title: 'Interactive App',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.light(),
+      theme: ThemeData.light().copyWith(scaffoldBackgroundColor: Colors.white),
       home: const MainView(),
     );
   }
