@@ -15,7 +15,7 @@ class _WelcomeCardState extends State<WelcomeCard> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(milliseconds: 300), () {
+    Future.delayed(const Duration(milliseconds: 1200), () {
       if (mounted) setState(() => _startAnimation = true);
     });
   }
@@ -24,7 +24,7 @@ class _WelcomeCardState extends State<WelcomeCard> {
   Widget build(BuildContext context) {
     return TweenAnimationBuilder(
       tween: Tween<double>(begin: 0, end: _startAnimation ? 1 : 0),
-      duration: const Duration(milliseconds: 600),
+      duration: const Duration(milliseconds: 800),
       curve: Curves.easeInOut,
       builder: (BuildContext context, double val, Widget? child) {
         return Padding(

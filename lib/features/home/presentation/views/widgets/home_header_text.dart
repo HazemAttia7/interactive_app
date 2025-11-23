@@ -8,7 +8,7 @@ class HomeHeaderText extends StatelessWidget {
   Widget build(BuildContext context) {
     return TweenAnimationBuilder(
       tween: Tween<double>(begin: 0, end: 1),
-      duration: const Duration(milliseconds: 800),
+      duration: const Duration(milliseconds: 600),
       curve: Curves.easeInOut,
       builder: (BuildContext context, double val, Widget? child) {
         return Padding(

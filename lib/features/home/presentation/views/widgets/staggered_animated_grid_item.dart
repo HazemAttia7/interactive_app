@@ -31,7 +31,7 @@ class _StaggeredAnimatedGridItemState extends State<StaggeredAnimatedGridItem> {
   Widget build(BuildContext context) {
     return TweenAnimationBuilder(
       tween: Tween<double>(begin: 0, end: visible ? 1 : 0),
-      duration: const Duration(milliseconds: 500),
+      duration: const Duration(milliseconds: 600),
       curve: Curves.easeInOutExpo,
       builder: (context, value, child) {
         return Transform.scale(

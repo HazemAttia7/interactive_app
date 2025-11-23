@@ -20,7 +20,7 @@ class AnimatedGridView extends StatelessWidget {
         ),
         children: const [
           StaggeredAnimatedGridItem(
-            delay: Duration(milliseconds: 0),
+            delay: Duration(milliseconds: 700),
             child: AnimatedGridViewItem(
               icon: FontAwesomeIcons.bolt,
               gradientColors: [Color(0xffFFBC00), Color(0xffFF7600)],
@@ -29,7 +29,7 @@ class AnimatedGridView extends StatelessWidget {
             ),
           ),
           StaggeredAnimatedGridItem(
-            delay: Duration(milliseconds: 150),
+            delay: Duration(milliseconds: 850),
             child: AnimatedGridViewItem(
               icon: FontAwesomeIcons.cube,
               gradientColors: [Color(0xFF0084FF), Color(0xFF002AFF)],
@@ -38,7 +38,7 @@ class AnimatedGridView extends StatelessWidget {
             ),
           ),
           StaggeredAnimatedGridItem(
-            delay: Duration(milliseconds: 300),
+            delay: Duration(milliseconds: 1000),
             child: AnimatedGridViewItem(
               icon: FontAwesomeIcons.listOl,
               gradientColors: [
@@ -51,7 +51,7 @@ class AnimatedGridView extends StatelessWidget {
             ),
           ),
           StaggeredAnimatedGridItem(
-            delay: Duration(milliseconds: 450),
+            delay: Duration(milliseconds: 1150),
             child: AnimatedGridViewItem(
               icon: FontAwesomeIcons.waveSquare,
               gradientColors: [Color(0xFF00EB7D), Color(0xff00BF7C)],
