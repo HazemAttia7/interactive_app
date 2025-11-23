@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:interactive_app/features/home/presentation/views/widgets/animated_grid_view.dart';
 import 'package:interactive_app/features/home/presentation/views/widgets/home_header.dart';
+import 'package:interactive_app/features/home/presentation/views/widgets/neumorphic_buttons_section.dart';
 import 'package:interactive_app/features/home/presentation/views/widgets/welcome_card.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -18,6 +19,8 @@ class HomeViewBody extends StatelessWidget {
           WelcomeCard(),
           Gap(25),
           AnimatedGridView(),
+          Gap(25),
+          NeumorphicButtonsSection()
         ],
       ),
     );
