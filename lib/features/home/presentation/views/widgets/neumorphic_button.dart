@@ -14,8 +14,8 @@ class _NeumorphicButtonState extends State<NeumorphicButton> {
 
   @override
   Widget build(BuildContext context) {
-    Offset distance = isPressed ? const Offset(4, 4) : const Offset(10, 10);
-    double blur = isPressed ? 10 : 25;
+    Offset distance = isPressed ? const Offset(4, 4) : const Offset(8, 8);
+    double blur = isPressed ? 10 : 20;
 
     return GestureDetector(
       onTap: () {

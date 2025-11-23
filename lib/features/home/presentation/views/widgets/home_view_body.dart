@@ -11,17 +11,20 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SafeArea(
-      child: Column(
-        children: [
-          Gap(25),
-          HomeHeader(),
-          Gap(25),
-          WelcomeCard(),
-          Gap(25),
-          AnimatedGridView(),
-          Gap(25),
-          NeumorphicButtonsSection()
-        ],
+      child: SingleChildScrollView(
+        physics: NeverScrollableScrollPhysics(),
+        child: Column(
+          children: [
+            Gap(5),
+            HomeHeader(),
+            Gap(10),
+            WelcomeCard(),
+            Gap(20),
+            AnimatedGridView(),
+            Gap(15),
+            NeumorphicButtonsSection(),
+          ],
+        ),
       ),
     );
   }

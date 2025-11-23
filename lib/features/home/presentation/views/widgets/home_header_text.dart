@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 
 class HomeHeaderText extends StatelessWidget {
   const HomeHeaderText({super.key});
@@ -20,7 +19,6 @@ class HomeHeaderText extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text("Flutter UI Demo", style: TextStyle(fontSize: 24)),
-          Gap(5),
           Text("Explore modern components", style: TextStyle(fontSize: 16)),
         ],
       ),

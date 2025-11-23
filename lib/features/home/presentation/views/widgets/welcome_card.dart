@@ -15,7 +15,7 @@ class _WelcomeCardState extends State<WelcomeCard> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(milliseconds: 1200), () {
+    Future.delayed(const Duration(milliseconds: 150), () {
       if (mounted) setState(() => _startAnimation = true);
     });
   }

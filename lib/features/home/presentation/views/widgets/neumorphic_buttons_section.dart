@@ -16,7 +16,7 @@ class _NeumorphicButtonsSectionState extends State<NeumorphicButtonsSection> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(milliseconds: 1800), () {
+    Future.delayed(const Duration(milliseconds: 650), () {
       if (mounted) setState(() => _startAnimation = true);
     });
   }
@@ -26,10 +26,10 @@ class _NeumorphicButtonsSectionState extends State<NeumorphicButtonsSection> {
     return TweenAnimationBuilder(
       tween: Tween<double>(begin: 0, end: _startAnimation ? 1 : 0),
       duration: const Duration(milliseconds: 650),
-      curve: Curves.easeIn,
+      curve: Curves.easeInOut,
       builder: (BuildContext context, double val, Widget? child) {
         return Padding(
-          padding: EdgeInsets.only(top: (1 - val) * 20),
+          padding: EdgeInsets.only(top: (1 - val) * 10),
           child: Opacity(opacity: val, child: child),
         );
       },
