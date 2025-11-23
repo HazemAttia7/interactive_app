@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:interactive_app/features/animations/presentation/views/animations_view.dart';
 import 'package:interactive_app/features/home/presentation/views/home_view.dart';
 
 class MainViewBody extends StatelessWidget {
@@ -13,7 +14,7 @@ class MainViewBody extends StatelessWidget {
       controller: pageController,
       children: const [
         HomeView(),
-        Center(child: Text("Animations View")),
+        AnimationsView(),
         Center(child: Text("Lists View")),
         Center(child: Text("Timeline View")),
         Center(child: Text("Profile View")),

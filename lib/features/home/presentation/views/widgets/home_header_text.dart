@@ -18,7 +18,10 @@ class HomeHeaderText extends StatelessWidget {
       child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Flutter UI Demo", style: TextStyle(fontSize: 24)),
+          Text(
+            "Flutter UI Demo",
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
+          ),
           Text("Explore modern components", style: TextStyle(fontSize: 16)),
         ],
       ),
