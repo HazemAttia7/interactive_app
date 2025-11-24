@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:interactive_app/features/animations/presentation/views/widgets/animated_list_view.dart';
 
@@ -7,18 +8,18 @@ class StaggeredListAnimationSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return  Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16),
+          padding: EdgeInsets.symmetric(horizontal: 16.sp),
           child: Text(
             "Staggered List Animation",
-            style: TextStyle(fontSize: 16),
+            style: TextStyle(fontSize: 16.sp),
           ),
         ),
-        Gap(15),
-        AnimatedListView(),
+        Gap(15.sp),
+        const AnimatedListView(),
       ],
     );
   }

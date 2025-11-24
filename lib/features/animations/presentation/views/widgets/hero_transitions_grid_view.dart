@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:interactive_app/core/utils/app_colors.dart';
 import 'package:interactive_app/features/animations/presentation/views/widgets/hero_transitions_grid_view_item.dart';
@@ -11,10 +12,10 @@ class HeroTransitionsGridView extends StatelessWidget {
     return GridView(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        crossAxisSpacing: 16,
-        mainAxisSpacing: 16,
+        crossAxisSpacing: 16.sp,
+        mainAxisSpacing: 16.sp,
         childAspectRatio: .95,
       ),
       children: const [

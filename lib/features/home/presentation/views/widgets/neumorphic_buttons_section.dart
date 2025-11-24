@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:interactive_app/features/home/presentation/views/widgets/neumorphic_buttons_row.dart';
 
@@ -29,18 +30,18 @@ class _NeumorphicButtonsSectionState extends State<NeumorphicButtonsSection> {
       curve: Curves.easeInOut,
       builder: (BuildContext context, double val, Widget? child) {
         return Padding(
-          padding: EdgeInsets.only(top: (1 - val) * 10),
+          padding: EdgeInsets.only(top: (1 - val) * 10.sp),
           child: Opacity(opacity: val, child: child),
         );
       },
-      child: const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16),
+      child:  Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.sp),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Neumorphic Buttons", style: TextStyle(fontSize: 16)),
-            Gap(15),
-            NeumorphicButtonsRow(),
+            Text("Neumorphic Buttons", style: TextStyle(fontSize: 16.sp)),
+            Gap(15.sp),
+            const NeumorphicButtonsRow(),
           ],
         ),
       ),

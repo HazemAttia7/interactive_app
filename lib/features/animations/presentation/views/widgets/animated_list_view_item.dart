@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:interactive_app/features/animations/presentation/views/widgets/gradient_circle.dart';
 
@@ -10,23 +11,23 @@ class AnimatedListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      margin: const EdgeInsets.symmetric(horizontal: 16),
-      padding: const EdgeInsets.all(16),
+      margin: EdgeInsets.symmetric(horizontal: 16.sp),
+      padding: EdgeInsets.all(16.sp),
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey.shade300, width: 1),
+        border: Border.all(color: Colors.grey.shade300, width: 1.sp),
         color: const Color(0xffF7F5FF),
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(16.r),
       ),
       child: Row(
         children: [
           const GradientCircle(),
-          const Gap(10),
+          Gap(10.sp),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(text, style: const TextStyle(fontSize: 15)),
-                const Text("Animated entry", style: TextStyle(fontSize: 15)),
+                Text(text, style: TextStyle(fontSize: 15.sp)),
+                Text("Animated entry", style: TextStyle(fontSize: 15.sp)),
               ],
             ),
           ),

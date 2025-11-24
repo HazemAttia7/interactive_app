@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:interactive_app/features/main/presentation/views/widgets/bottom_nav_bar_item.dart';
 
@@ -18,7 +19,7 @@ class CustomBottomNavBar extends StatelessWidget {
         color: Colors.white,
         border: Border(top: BorderSide(color: Colors.grey.shade300)),
       ),
-      padding: const EdgeInsets.symmetric(vertical: 8),
+      padding: EdgeInsets.symmetric(vertical: 8.sp),
       child: SizedBox(
         child: Row(
           children: [

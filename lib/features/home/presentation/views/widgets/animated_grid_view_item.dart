@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:interactive_app/features/home/presentation/views/widgets/gradient_icon_container.dart';
 
@@ -17,23 +18,23 @@ class AnimatedGridViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(16),
+      padding: EdgeInsets.all(16.w),
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey.shade300, width: 1),
-        borderRadius: BorderRadius.circular(24),
+        border: Border.all(color: Colors.grey.shade300, width: 1.sp),
+        borderRadius: BorderRadius.circular(24.r),
         color: const Color(0xffF9FAFB),
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
-        spacing: 8,
+        spacing: 8.sp,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           GradientIconContainer(icon: icon, gradientColors: gradientColors),
-          const Gap(8),
-          Text(title, style: const TextStyle(fontSize: 14)),
+          Gap(8.sp),
+          Text(title, style: TextStyle(fontSize: 14.sp)),
           Text(
             subtitle,
-            style: const TextStyle(fontSize: 14, color: Colors.black45),
+            style: TextStyle(fontSize: 14.sp, color: Colors.black45),
           ),
         ],
       ),

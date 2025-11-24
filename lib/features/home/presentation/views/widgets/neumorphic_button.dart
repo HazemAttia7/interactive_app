@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart' hide BoxShadow, BoxDecoration;
 import 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NeumorphicButton extends StatefulWidget {
   final VoidCallback onTap;
@@ -14,7 +15,7 @@ class _NeumorphicButtonState extends State<NeumorphicButton> {
 
   @override
   Widget build(BuildContext context) {
-    Offset distance = isPressed ? const Offset(4, 4) : const Offset(8, 8);
+    Offset distance = isPressed ? Offset(4.sp, 4.sp) : Offset(8.sp, 8.sp);
     double blur = isPressed ? 10 : 20;
 
     return GestureDetector(
@@ -26,11 +27,11 @@ class _NeumorphicButtonState extends State<NeumorphicButton> {
       },
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 100),
-        width: 70,
-        height: 70,
+        width: 70.sp,
+        height: 70.sp,
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(16.r),
           boxShadow: [
             BoxShadow(
               blurRadius: blur,

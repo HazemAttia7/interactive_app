@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:interactive_app/core/utils/app_colors.dart';
 import 'package:interactive_app/features/home/presentation/views/widgets/animated_grid_view_item.dart';
@@ -11,13 +12,14 @@ class AnimatedGridView extends StatelessWidget {
   Widget build(BuildContext context) {
     const int delay = 150;
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+      padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: GridView(
+        physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
-          crossAxisSpacing: 16,
-          mainAxisSpacing: 16,
+          crossAxisSpacing: 16.sp,
+          mainAxisSpacing: 16.sp,
           childAspectRatio: 1.15,
         ),
         children: const [

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:interactive_app/core/utils/gradients.dart';
 
@@ -19,25 +20,25 @@ class HeroTransitionsGridViewItem extends StatelessWidget {
       onTap: () {},
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(24),
+          borderRadius: BorderRadius.circular(24.r),
           gradient: Gradients.radialGradient(gradientColors: gradientColors),
         ),
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.all(16.sp),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Icon(icon, color: Colors.white),
+                Icon(icon, color: Colors.white, size: 24.sp),
                 const Icon(FontAwesomeIcons.heart, color: Colors.white),
               ],
             ),
             Text(
               text,
-              style: const TextStyle(
+              style: TextStyle(
                 color: Colors.white,
-                fontSize: 16,
+                fontSize: 16.sp,
                 fontWeight: FontWeight.bold,
               ),
             ),

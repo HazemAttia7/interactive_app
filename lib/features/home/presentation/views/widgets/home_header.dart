@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:interactive_app/features/home/presentation/views/widgets/gradient_theme_button.dart';
 import 'package:interactive_app/features/home/presentation/views/widgets/home_header_text.dart';
 
@@ -7,13 +8,13 @@ class HomeHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return  Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        HomeHeaderText(),
+        const HomeHeaderText(),
         Padding(
-          padding: EdgeInsets.only(right: 16),
-          child: GradientThemeButton(),
+          padding: EdgeInsets.only(right: 16.w),
+          child: const GradientThemeButton(),
         ),
       ],
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:interactive_app/features/home/presentation/views/widgets/android_ios_row.dart';
 
@@ -28,15 +29,15 @@ class _WelcomeCardState extends State<WelcomeCard> {
       curve: Curves.easeInOut,
       builder: (BuildContext context, double val, Widget? child) {
         return Padding(
-          padding: EdgeInsets.only(top: (1 - val) * 20),
+          padding: EdgeInsets.only(top: (1 - val) * 20.sp),
           child: Opacity(opacity: val, child: child),
         );
       },
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
+        padding: EdgeInsets.symmetric(horizontal: 16.w),
         child: Container(
           width: double.infinity,
-          padding: const EdgeInsets.all(24),
+          padding: EdgeInsets.all(24.sp),
           decoration: BoxDecoration(
             gradient: const LinearGradient(
               colors: [
@@ -49,30 +50,30 @@ class _WelcomeCardState extends State<WelcomeCard> {
               end: Alignment.bottomRight,
               stops: [0, .45, .55, 1],
             ),
-            borderRadius: BorderRadius.circular(24),
-            boxShadow: const [
+            borderRadius: BorderRadius.circular(24.r),
+            boxShadow: [
               BoxShadow(
                 color: Colors.black26,
                 blurRadius: 16,
                 spreadRadius: -5,
-                offset: Offset(0, 10),
+                offset: Offset(0, 10.sp),
               ),
             ],
           ),
-          child: const Column(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 "Welcome! 👋",
-                style: TextStyle(fontSize: 14, color: Colors.white),
+                style: TextStyle(fontSize: 14.sp, color: Colors.white),
               ),
-              Gap(10),
+              Gap(10.sp),
               Text(
                 "This demo showcases various Flutter-inspired UI components and animations built with React.",
-                style: TextStyle(fontSize: 13, color: Colors.white),
+                style: TextStyle(fontSize: 13.sp, color: Colors.white),
               ),
-              Gap(20),
-              AndroidIOSrow(),
+              Gap(20.sp),
+              const AndroidIOSrow(),
             ],
           ),
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BubbleTag extends StatelessWidget {
   final String text;
@@ -7,14 +8,14 @@ class BubbleTag extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.sp),
       decoration: BoxDecoration(
         color: Colors.white.withValues(alpha: .17),
-        borderRadius: BorderRadius.circular(1000),
+        borderRadius: BorderRadius.circular(1000.r),
       ),
       child: Text(
         text,
-        style: const TextStyle(color: Colors.white, fontSize: 16),
+        style: TextStyle(color: Colors.white, fontSize: 16.sp),
       ),
     );
   }
