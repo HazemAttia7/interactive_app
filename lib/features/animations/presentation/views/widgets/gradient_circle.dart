@@ -1,12 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:interactive_app/core/utils/app_colors.dart';
 import 'package:interactive_app/core/utils/gradients.dart';
 
 class GradientCircle extends StatelessWidget {
-  const GradientCircle({
-    super.key,
-  });
+  const GradientCircle({super.key});
 
   @override
   Widget build(BuildContext context) {

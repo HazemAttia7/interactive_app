@@ -26,4 +26,10 @@ abstract class AppColors {
     Color(0xFF00EB7D),
     Color(0xff00BF7C),
   ];
+
+  static const List<Color> darkFuturisticGradient = [
+    Color(0xFF0F172A),
+    Color(0xFF1E293B),
+    Color(0xFF334155),
+  ];
 }

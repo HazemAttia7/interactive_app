@@ -2,12 +2,16 @@ import 'package:flutter/material.dart';
 
 class StaggeredAnimatedGridItem extends StatefulWidget {
   final Duration delay;
+  final Duration duration;
+  final Curve curve;
   final Widget child;
 
   const StaggeredAnimatedGridItem({
     super.key,
     required this.delay,
     required this.child,
+    this.duration = const Duration(milliseconds: 600),
+    this.curve = Curves.easeInOutExpo,
   });
 
   @override
@@ -31,15 +35,19 @@ class _StaggeredAnimatedGridItemState extends State<StaggeredAnimatedGridItem> {
   Widget build(BuildContext context) {
     return TweenAnimationBuilder(
       tween: Tween<double>(begin: 0, end: visible ? 1 : 0),
-      duration: const Duration(milliseconds: 600),
-      curve: Curves.easeInOutExpo,
+      duration: widget.duration,
+      curve: widget.curve,
       builder: (context, value, child) {
-        return Transform.scale(
-          scale: value,
-          child: Opacity(opacity: value, child: child),
-        );
+        return Transform.scale(scale: value, child: child);
       },
-      child: widget.child,
+      child: TweenAnimationBuilder(
+        tween: Tween<double>(begin: 0, end: visible ? 1 : 0),
+        duration: const Duration(milliseconds: 650),
+        curve: Curves.easeInOut,
+        builder: (context, double value, Widget? child) {
+          return Opacity(opacity: value, child: widget.child);
+        },
+      ),
     );
   }
 }

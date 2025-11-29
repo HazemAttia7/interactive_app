@@ -8,13 +8,12 @@ class HeroTransitionsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
+    return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.sp),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text("Hero Transitions", style: TextStyle(fontSize: 16.sp)),
-          Gap(15.sp),
           Text(
             "Tap a card to expand",
             style: TextStyle(fontSize: 14.sp, color: Colors.black45),
