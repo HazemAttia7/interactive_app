@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:interactive_app/core/utils/gradients.dart';
+import 'package:like_button/like_button.dart';
 
 class HeroTransitionsGridViewItem extends StatelessWidget {
   final List<Color> gradientColors;
@@ -31,7 +32,15 @@ class HeroTransitionsGridViewItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Icon(icon, color: Colors.white, size: 24.sp),
-                const Icon(FontAwesomeIcons.heart, color: Colors.white),
+                LikeButton(
+                  size: 24.sp,
+                  likeBuilder: (isLiked) => Icon(
+                    isLiked
+                        ? FontAwesomeIcons.solidHeart
+                        : FontAwesomeIcons.heart,
+                    color: Colors.white,
+                  ),
+                ),
               ],
             ),
             Text(
