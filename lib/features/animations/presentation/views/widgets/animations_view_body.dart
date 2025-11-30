@@ -19,7 +19,10 @@ class AnimationsViewBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Gap(10.sp),
-          const AnimationsHeaderText(),
+          const AnimatedTopPaddingHeaderText(
+            title: "Animations",
+            subtitle: "Smooth transitions and effects",
+          ),
           Gap(25.sp),
           Builder(
             builder: (btnCtx) {

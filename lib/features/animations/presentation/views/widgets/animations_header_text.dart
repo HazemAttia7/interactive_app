@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class AnimationsHeaderText extends StatelessWidget {
-  const AnimationsHeaderText({super.key});
+class AnimatedTopPaddingHeaderText extends StatelessWidget {
+  final String title, subtitle;
+  const AnimatedTopPaddingHeaderText({
+    super.key,
+    required this.title,
+    required this.subtitle,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -33,16 +38,13 @@ class AnimationsHeaderText extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Animations",
+                  title,
                   style: TextStyle(
                     fontSize: 24.sp,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                Text(
-                  "Smooth transitions and effects",
-                  style: TextStyle(fontSize: 16.sp),
-                ),
+                Text(subtitle, style: TextStyle(fontSize: 16.sp)),
               ],
             ),
           ),
