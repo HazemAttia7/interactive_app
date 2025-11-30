@@ -34,8 +34,16 @@ class _CustomReorderableListViewState extends State<CustomReorderableListView> {
           child: child,
         );
       },
-      itemBuilder: (context, index) =>
-          ReorderableListViewItem(key: ValueKey(index), item: items[index]),
+      itemBuilder: (context, index) => TweenAnimationBuilder<double>(
+        key: ValueKey(index),
+        tween: Tween<double>(begin: 0, end: 1),
+        duration: const Duration(milliseconds: 900),
+        curve: Curves.elasticOut,
+        builder: (context, double value, Widget? child) {
+          return Transform.scale(scale: value, child: child);
+        },
+        child: ReorderableListViewItem(item: items[index]),
+      ),
       itemCount: 4,
       onReorder: reOrder,
     );

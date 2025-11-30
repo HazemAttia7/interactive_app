@@ -13,8 +13,8 @@ class StaggeredAnimatedListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double start = index * .05;
-    final double end = start + 0.35;
+    final double start = index * .1;
+    final double end = start + 0.5;
 
     final Animation<Offset> animation =
         Tween<Offset>(
@@ -26,7 +26,7 @@ class StaggeredAnimatedListItem extends StatelessWidget {
             curve: Interval(
               start.clamp(0, 1),
               end.clamp(0, 1),
-              curve: Curves.elasticOut,
+              curve: Curves.easeOutBack,
             ),
           ),
         );

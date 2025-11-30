@@ -19,7 +19,7 @@ class _AnimatedListViewState extends State<AnimatedListView>
     super.initState();
     _animationController = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 2150),
+      duration: const Duration(milliseconds: 1000),
     );
 
     _animationController.forward();

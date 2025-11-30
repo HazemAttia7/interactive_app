@@ -26,9 +26,11 @@ class _StaggeredAnimatedGridItemState extends State<StaggeredAnimatedGridItem> {
   void initState() {
     super.initState();
 
-    Future.delayed(widget.delay, () {
-      if (mounted) setState(() => visible = true);
-    });
+    widget.delay.inMilliseconds > 0
+        ? Future.delayed(widget.delay, () {
+            if (mounted) setState(() => visible = true);
+          })
+        : setState(() => visible = true); 
   }
 
   @override
