@@ -1,6 +1,15 @@
 import 'package:flutter/widgets.dart';
 
 abstract class AppColors {
+  static final List<List<Color>> gradientColors = [
+    orangeGradient,
+    blueGradient,
+    greenGradient,
+    purpleGradient,
+    darkPurpleGradient,
+    darkFuturisticGradient,
+  ];
+
   static const List<Color> orangeGradient = [
     Color(0xffFFBC00),
     Color(0xffFF7600),
