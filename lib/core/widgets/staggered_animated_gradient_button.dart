@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:interactive_app/core/utils/app_colors.dart';
+import 'package:interactive_app/core/widgets/staggered_animated_slide_item.dart';
 
-class AnimatedGradientButton extends StatefulWidget {
+class StaggeredAnimatedGradientButton extends StatelessWidget {
   final String text;
   final VoidCallback onTap;
   final Duration delay;
-  const AnimatedGradientButton({
+  const StaggeredAnimatedGradientButton({
     super.key,
     required this.text,
     required this.onTap,
@@ -14,32 +15,11 @@ class AnimatedGradientButton extends StatefulWidget {
   });
 
   @override
-  State<AnimatedGradientButton> createState() => _AnimatedGradientButtonState();
-}
-
-class _AnimatedGradientButtonState extends State<AnimatedGradientButton> {
-  bool visible = false;
-
-  @override
-  void initState() {
-    super.initState();
-    Future.delayed(widget.delay, () => setState(() => visible = true));
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return TweenAnimationBuilder<Offset>(
-      duration: const Duration(seconds: 1),
-      tween: Tween<Offset>(
-        begin: const Offset(-100, 0),
-        end: visible ? const Offset(0, 0) : const Offset(-100, 0),
-      ),
-      curve: Curves.elasticOut,
-      builder: (context, Offset value, Widget? child) {
-        return Transform.translate(offset: value, child: child);
-      },
+    return StaggeredAnimatedSlideItem(
+      delay: delay,
       child: GestureDetector(
-        onTap: widget.onTap,
+        onTap: onTap,
         child: Container(
           width: double.infinity,
           padding: EdgeInsets.symmetric(vertical: 18.sp),
@@ -53,7 +33,7 @@ class _AnimatedGradientButtonState extends State<AnimatedGradientButton> {
           ),
           child: Center(
             child: Text(
-              widget.text,
+              text,
               style: TextStyle(color: Colors.white, fontSize: 16.sp),
             ),
           ),

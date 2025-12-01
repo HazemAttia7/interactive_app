@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:interactive_app/features/animations/presentation/views/widgets/animated_list_view_item.dart';
-import 'package:interactive_app/features/animations/presentation/views/widgets/staggered_animated_list_item.dart';
+import 'package:interactive_app/core/widgets/staggered_animated_list_item.dart';
 
 class AnimatedListView extends StatefulWidget {
   const AnimatedListView({super.key});

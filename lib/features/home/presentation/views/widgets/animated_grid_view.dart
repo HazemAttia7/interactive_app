@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:interactive_app/core/utils/app_colors.dart';
 import 'package:interactive_app/features/home/presentation/views/widgets/animated_grid_view_item.dart';
-import 'package:interactive_app/features/home/presentation/views/widgets/staggered_animated_grid_item.dart';
+import 'package:interactive_app/core/widgets/staggered_animated_scale_item.dart';
 
 class AnimatedGridView extends StatelessWidget {
   const AnimatedGridView({super.key});
@@ -23,7 +23,7 @@ class AnimatedGridView extends StatelessWidget {
           childAspectRatio: 1.15,
         ),
         children: const [
-          StaggeredAnimatedGridItem(
+          StaggeredAnimatedScaleItem(
             delay: Duration(milliseconds: delay),
             child: AnimatedGridViewItem(
               icon: FontAwesomeIcons.bolt,
@@ -32,7 +32,7 @@ class AnimatedGridView extends StatelessWidget {
               subtitle: "Smooth transitions",
             ),
           ),
-          StaggeredAnimatedGridItem(
+          StaggeredAnimatedScaleItem(
             delay: Duration(milliseconds: delay * 2),
             child: AnimatedGridViewItem(
               icon: FontAwesomeIcons.cube,
@@ -41,7 +41,7 @@ class AnimatedGridView extends StatelessWidget {
               subtitle: "Modern design",
             ),
           ),
-          StaggeredAnimatedGridItem(
+          StaggeredAnimatedScaleItem(
             delay: Duration(milliseconds: delay * 3),
             child: AnimatedGridViewItem(
               icon: FontAwesomeIcons.listOl,
@@ -50,7 +50,7 @@ class AnimatedGridView extends StatelessWidget {
               subtitle: "Drag & reorder",
             ),
           ),
-          StaggeredAnimatedGridItem(
+          StaggeredAnimatedScaleItem(
             delay: Duration(milliseconds: delay * 4),
             child: AnimatedGridViewItem(
               icon: FontAwesomeIcons.waveSquare,

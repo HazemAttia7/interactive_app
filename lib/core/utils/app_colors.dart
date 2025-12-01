@@ -10,6 +10,21 @@ abstract class AppColors {
     darkFuturisticGradient,
   ];
 
+  static const List<Color> activeGradient = [
+    Color(0xff3DA8F9),
+    Color(0xff00B4E4),
+  ];
+
+  static const List<Color> pendingGradient = [
+    Color(0xff8E96A4),
+    Color(0xff727A8A),
+  ];
+
+  static const List<Color> doneGradient = [
+    Color(0xff00D975),
+    Color(0xff00C37B),
+  ];
+
   static const List<Color> orangeGradient = [
     Color(0xffFFBC00),
     Color(0xffFF7600),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:interactive_app/features/animations/presentation/views/animations_view.dart';
 import 'package:interactive_app/features/home/presentation/views/home_view.dart';
 import 'package:interactive_app/features/lists/presentation/views/lists_view.dart';
+import 'package:interactive_app/features/timeline/presentation/views/timeline_view.dart';
 
 class MainViewBody extends StatelessWidget {
   const MainViewBody({super.key, required this.pageController});
@@ -17,7 +18,7 @@ class MainViewBody extends StatelessWidget {
         HomeView(),
         AnimationsView(),
         ListsView(),
-        Center(child: Text("Timeline View")),
+        TimelineView(),
         Center(child: Text("Profile View")),
       ],
     );

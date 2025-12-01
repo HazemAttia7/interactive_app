@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
 
-class StaggeredAnimatedGridItem extends StatefulWidget {
+class StaggeredAnimatedScaleItem extends StatefulWidget {
   final Duration delay;
   final Duration duration;
   final Curve curve;
   final Widget child;
 
-  const StaggeredAnimatedGridItem({
+  const StaggeredAnimatedScaleItem({
     super.key,
-    required this.delay,
+    this.delay = const Duration(milliseconds: 0),
     required this.child,
     this.duration = const Duration(milliseconds: 600),
     this.curve = Curves.easeInOutExpo,
   });
 
   @override
-  State<StaggeredAnimatedGridItem> createState() =>
-      _StaggeredAnimatedGridItemState();
+  State<StaggeredAnimatedScaleItem> createState() =>
+      _StaggeredAnimatedScaleItemState();
 }
 
-class _StaggeredAnimatedGridItemState extends State<StaggeredAnimatedGridItem> {
+class _StaggeredAnimatedScaleItemState
+    extends State<StaggeredAnimatedScaleItem> {
   bool visible = false;
 
   @override
@@ -30,7 +31,7 @@ class _StaggeredAnimatedGridItemState extends State<StaggeredAnimatedGridItem> {
         ? Future.delayed(widget.delay, () {
             if (mounted) setState(() => visible = true);
           })
-        : setState(() => visible = true); 
+        : setState(() => visible = true);
   }
 
   @override

@@ -5,7 +5,7 @@ import 'package:interactive_app/features/animations/presentation/views/animation
 import 'package:interactive_app/features/animations/presentation/views/widgets/animated_list_view.dart';
 import 'package:interactive_app/features/animations/presentation/views/widgets/animations_header_text.dart';
 import 'package:interactive_app/features/animations/presentation/views/widgets/hero_transitions_section.dart';
-import 'package:interactive_app/features/animations/presentation/views/widgets/animated_gradient_button.dart';
+import 'package:interactive_app/core/widgets/staggered_animated_gradient_button.dart';
 import 'package:interactive_app/features/animations/presentation/views/widgets/menu_items.dart';
 import 'package:popover/popover.dart';
 
@@ -26,7 +26,7 @@ class AnimationsViewBody extends StatelessWidget {
           Gap(25.sp),
           Builder(
             builder: (btnCtx) {
-              return AnimatedGradientButton(
+              return StaggeredAnimatedGradientButton(
                 text: 'Show Popup Menu',
                 onTap: () => showPopover(
                   context: btnCtx,
@@ -40,7 +40,7 @@ class AnimationsViewBody extends StatelessWidget {
             },
           ),
           Gap(20.sp),
-          AnimatedGradientButton(
+          StaggeredAnimatedGradientButton(
             text: 'Show Animated List',
             onTap: () {
               Navigator.of(context).push(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:interactive_app/features/home/presentation/views/widgets/staggered_animated_grid_item.dart';
+import 'package:interactive_app/core/widgets/staggered_animated_scale_item.dart';
 
 class StaggeredGridView extends StatelessWidget {
   const StaggeredGridView({super.key});
@@ -17,7 +17,7 @@ class StaggeredGridView extends StatelessWidget {
         crossAxisCount: 2,
       ),
       itemCount: heights.length,
-      itemBuilder: (context, index) => StaggeredAnimatedGridItem(
+      itemBuilder: (context, index) => StaggeredAnimatedScaleItem(
         duration: const Duration(milliseconds: 400),
         delay: Duration(milliseconds: index * 150),
         child: StaggeredGridViewItem(
