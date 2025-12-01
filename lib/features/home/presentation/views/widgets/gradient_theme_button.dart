@@ -8,7 +8,9 @@ class GradientThemeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        // TODO : Change Theme
+      },
       child: Container(
         padding: EdgeInsets.all(14.sp),
         decoration: const BoxDecoration(

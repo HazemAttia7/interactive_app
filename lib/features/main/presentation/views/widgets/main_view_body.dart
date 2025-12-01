@@ -19,7 +19,6 @@ class MainViewBody extends StatelessWidget {
         AnimationsView(),
         ListsView(),
         TimelineView(),
-        Center(child: Text("Profile View")),
       ],
     );
   }
