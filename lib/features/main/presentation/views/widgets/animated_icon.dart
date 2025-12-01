@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AnimatedIcon extends StatelessWidget {
   const AnimatedIcon({super.key, required this.isSelected, required this.icon});
@@ -22,7 +23,7 @@ class AnimatedIcon extends StatelessWidget {
         builder: (context, value, child) {
           return Icon(
             icon,
-            size: 20 + (2 * value),
+            size: (20 + (2 * value)).sp,
             color: Color.lerp(Colors.black, Colors.white, value),
           );
         },

@@ -55,14 +55,6 @@ class CustomBottomNavBar extends StatelessWidget {
                 onTap: () => onSelectTab(3),
               ),
             ),
-            Expanded(
-              child: BottomNavBarItem(
-                text: "Profile",
-                icon: FontAwesomeIcons.person,
-                isSelected: index == 4,
-                onTap: () => onSelectTab(4),
-              ),
-            ),
           ],
         ),
       ),

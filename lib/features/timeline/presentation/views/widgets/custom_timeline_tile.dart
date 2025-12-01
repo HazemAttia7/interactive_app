@@ -52,24 +52,27 @@ class CustomTimelineTile extends StatelessWidget {
           duration: const Duration(seconds: 1),
           curve: Curves.easeInOutBack,
           delay: delay ?? const Duration(milliseconds: 0),
-          child: (enStatus == enTimelineStatus.active) ? const ActiveAnimatedWidget() : Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: iconGradientBackColor ?? _getIconBackColor(enStatus),
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
-              shape: BoxShape.circle,
-            ),
-            child: Icon(
-              icon ?? _getIcon(enStatus),
-              color: Colors.white,
-              size: iconSize ?? 22.sp,
-            ),
-          ),
+          child: (enStatus == enTimelineStatus.active)
+              ? const ActiveAnimatedWidget()
+              : Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors:
+                          iconGradientBackColor ?? _getIconBackColor(enStatus),
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    shape: BoxShape.circle,
+                  ),
+                  child: Icon(
+                    icon ?? _getIcon(enStatus),
+                    color: Colors.white,
+                    size: iconSize ?? 22.sp,
+                  ),
+                ),
         ),
       ),
-      beforeLineStyle: LineStyle(color: Colors.black45, thickness: 1.5.sp),
+      beforeLineStyle: LineStyle(color: Colors.black45, thickness: 2.sp),
       endChild: StaggeredAnimatedSlideItem(
         delay: delay ?? const Duration(milliseconds: 0),
         child: TimelineEndChild(
