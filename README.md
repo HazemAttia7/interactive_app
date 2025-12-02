@@ -1,16 +1,86 @@
-# interactive_app
+# 🚀 Interactive Showcase App
 
-A new Flutter project.
+A Flutter application demonstrating various animation techniques, UI interactions, and theme-switching features.  
+This project was built as a personal showcase to practice advanced Flutter animations and experiment with components I had never implemented before.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✨ Features
 
-A few resources to get you started if this is your first Flutter project:
+### 🎨 Animations & UI
+- Smooth screen transitions  
+- Hero animations  
+- Timeline animation  
+- Pop-up menu  
+- Numeric buttons  
+- Multiple interactive animation examples  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 🌓 Theming
+- Light & Dark theme switcher  
+- Theme persistence using `shared_preferences`
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 📱 Responsiveness
+- Mobile-first design  
+- Responsive layout using `flutter_screenutil`
+
+---
+
+## 🛠️ Tech Stack & Packages
+
+- **Flutter**
+- **Provider** – State Management  
+- **shared_preferences** – Local Storage  
+- **flutter_screenutil** – Responsive UI  
+- **flutter_inset_box_shadow**  
+- **flutter_staggered_grid_view**  
+- **font_awesome_flutter**  
+- **gap**  
+- **like_button**  
+- **popover**  
+- **timeline_tile**
+
+---
+
+## 📂 Folder Structure (Simplified)
+```
+lib/
+┣ core/
+┃ ┣ utils/
+┃ ┗ theme/
+┣ features/
+┃ ┣ animations/
+┃ ┣ timeline/
+┃ ┣ popups/
+┃ ┗ home/
+┗ main.dart
+```
+
+
+---
+
+## 🎯 Purpose of the Project
+
+This app serves as an **animation playground** where I explored:
+- Advanced animations  
+- Hero transitions  
+- Timeline-based animation flow  
+- Theme switching  
+- Interactive UI elements  
+
+It was also a great exercise to improve Flutter animation skills and learn new techniques.
+
+---
+
+## 📸 Screenshots
+
+<p align="center">
+  <img src="screenshots/home light.png" width="250" />
+  <img src="screenshots/home dark.png" width="250" />
+</p>
+<p align="center">
+  <img src="screenshots/animations dark.png" width="250" />
+  <img src="screenshots/lists dark.png" width="250" />
+  <img src="screenshots/timeline dark.png" width="250" />
+</p>
+
+
