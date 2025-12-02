@@ -30,19 +30,19 @@ class _NeumorphicButtonState extends State<NeumorphicButton> {
         width: 70.sp,
         height: 70.sp,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Theme.of(context).colorScheme.surface,
           borderRadius: BorderRadius.circular(16.r),
           boxShadow: [
             BoxShadow(
               blurRadius: blur,
               offset: distance,
-              color: const Color(0xFFA7A9AF),
+              color: Theme.of(context).shadowColor,
               inset: isPressed,
             ),
             BoxShadow(
               blurRadius: blur,
               offset: -distance,
-              color: Colors.white,
+              color: Theme.of(context).colorScheme.shadow,
               inset: isPressed,
             ),
           ],
@@ -50,7 +50,7 @@ class _NeumorphicButtonState extends State<NeumorphicButton> {
         child: Center(
           child: Text(
             "button",
-            style: TextStyle(color: isPressed ? Colors.grey : Colors.black),
+            style: TextStyle(color: isPressed ? Colors.grey : null),
           ),
         ),
       ),

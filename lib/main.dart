@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:interactive_app/core/theme/theme.dart';
+import 'package:interactive_app/core/theme/theme_controller.dart';
 import 'package:interactive_app/features/main/presentation/views/main_view.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const InteractiveApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => ThemeController(),
+      child: const InteractiveApp(),
+    ),
+  );
 }
 
 class InteractiveApp extends StatelessWidget {
@@ -16,13 +24,17 @@ class InteractiveApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, _) {
-        return MaterialApp(
-          title: 'Interactive App',
-          debugShowCheckedModeBanner: false,
-          theme: ThemeData.light().copyWith(
-            scaffoldBackgroundColor: Colors.white,
-          ),
-          home: const MainView(),
+        return Consumer<ThemeController>(
+          builder: (context, controller, child) {
+            return MaterialApp(
+              title: 'Interactive App',
+              debugShowCheckedModeBanner: false,
+              theme: lightTheme,
+              darkTheme: darkTheme,
+              themeMode: controller.themeMode,
+              home: const MainView(),
+            );
+          },
         );
       },
     );

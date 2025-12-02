@@ -25,6 +25,21 @@ abstract class AppColors {
     Color(0xff00C37B),
   ];
 
+  static const List<Color> activeGradientDark = [
+    Color(0xff2563EB),
+    Color(0xff0284C7),
+  ];
+
+  static const List<Color> pendingGradientDark = [
+    Color(0xff52525B),
+    Color(0xff3F3F46),
+  ];
+
+  static const List<Color> doneGradientDark = [
+    Color(0xff10B981),
+    Color(0xff059669),
+  ];
+
   static const List<Color> orangeGradient = [
     Color(0xffFFBC00),
     Color(0xffFF7600),
@@ -56,4 +71,28 @@ abstract class AppColors {
     Color(0xFF1E293B),
     Color(0xFF334155),
   ];
+
+  static Color? toDarkMode(Color? lightColor) {
+    if (lightColor == null) return null;
+    final hsl = HSLColor.fromColor(lightColor);
+
+    if (hsl.lightness > 0.8) {
+      return hsl
+          .withLightness(0.15)
+          .withSaturation(hsl.saturation * 0.7)
+          .toColor();
+    }
+
+    if (hsl.lightness > 0.6) {
+      return hsl
+          .withLightness(hsl.lightness * 0.4)
+          .withSaturation(hsl.saturation * 0.85)
+          .toColor();
+    }
+
+    return hsl
+        .withLightness(hsl.lightness * 0.6)
+        .withSaturation(hsl.saturation * 0.9)
+        .toColor();
+  }
 }

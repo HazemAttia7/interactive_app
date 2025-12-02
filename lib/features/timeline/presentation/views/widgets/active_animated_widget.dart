@@ -61,7 +61,7 @@ class _ActiveAnimatedWidgetState extends State<ActiveAnimatedWidget>
             Opacity(
               opacity: (1 - _animation.value).toDouble(),
               child: Transform.scale(
-                scale: (1 + _animation.value * .3).toDouble(),
+                scale: (1 + _animation.value * .35).toDouble(),
                 child: Container(
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,

@@ -32,9 +32,11 @@ class _MainViewState extends State<MainView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: MainViewBody(pageController: pageController),
-      bottomNavigationBar: CustomBottomNavBar(
-        index: _currentIndex,
-        onSelectTab: _onSelectTab,
+      bottomNavigationBar: SafeArea(
+        child: CustomBottomNavBar(
+          index: _currentIndex,
+          onSelectTab: _onSelectTab,
+        ),
       ),
     );
   }

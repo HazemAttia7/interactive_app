@@ -96,7 +96,7 @@ class _HeroTransitionsGridViewItemState
 
   Scaffold _buildHeroTransitionShowcaseView(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: SafeArea(
         child: Center(
           child: Column(

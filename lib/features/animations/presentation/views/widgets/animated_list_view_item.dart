@@ -14,8 +14,11 @@ class AnimatedListViewItem extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: 16.sp),
       padding: EdgeInsets.all(16.sp),
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey.shade300, width: 1.sp),
-        color: const Color(0xffF7F5FF),
+        border: Border.all(
+          color: Theme.of(context).colorScheme.outline,
+          width: 1.sp,
+        ),
+        color: Theme.of(context).colorScheme.secondary,
         borderRadius: BorderRadius.circular(16.r),
       ),
       child: Row(

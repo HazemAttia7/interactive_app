@@ -20,9 +20,12 @@ class AnimatedGridViewItem extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(16.w),
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey.shade300, width: 1.sp),
+        border: Border.all(
+          color: Theme.of(context).colorScheme.outline,
+          width: 1.sp,
+        ),
         borderRadius: BorderRadius.circular(24.r),
-        color: const Color(0xffF9FAFB),
+        color: Theme.of(context).colorScheme.secondary,
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -34,7 +37,10 @@ class AnimatedGridViewItem extends StatelessWidget {
           Text(title, style: TextStyle(fontSize: 14.sp)),
           Text(
             subtitle,
-            style: TextStyle(fontSize: 14.sp, color: Colors.black45),
+            style: TextStyle(
+              fontSize: 14.sp,
+              color: Theme.of(context).hintColor,
+            ),
           ),
         ],
       ),

@@ -47,19 +47,26 @@ class StaggeredGridViewItem extends StatelessWidget {
         height: height.sp,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12.r),
-          gradient: const LinearGradient(
+          border: Border.all(
+            color: Theme.of(context).colorScheme.outlineVariant,
+            width: 1.sp,
+          ),
+          gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [Color(0xFFE3EEFF), Color(0xFFF3E2FF)],
+            colors: _getGradientColors(context),
           ),
         ),
         child: Center(
-          child: Text(
-            text,
-            style: TextStyle(color: Colors.black, fontSize: 14.sp),
-          ),
+          child: Text(text, style: TextStyle(fontSize: 14.sp)),
         ),
       ),
     );
+  }
+
+  List<Color> _getGradientColors(BuildContext context) {
+    return Theme.of(context).brightness == Brightness.light
+        ? [const Color(0xFFE3EEFF), const Color(0xFFF3E2FF)]
+        : [const Color(0xFF1A2332), const Color(0xFF2A1A33)];
   }
 }

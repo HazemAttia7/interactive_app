@@ -24,7 +24,7 @@ class AnimatedIcon extends StatelessWidget {
           return Icon(
             icon,
             size: (20 + (2 * value)).sp,
-            color: Color.lerp(Colors.black, Colors.white, value),
+            color: Color.lerp(Theme.of(context).colorScheme.primary, Colors.white, value),
           );
         },
       ),

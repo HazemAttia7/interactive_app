@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:interactive_app/core/theme/theme_controller.dart';
+import 'package:provider/provider.dart';
 
 class GradientThemeButton extends StatelessWidget {
   const GradientThemeButton({super.key});
@@ -9,7 +11,7 @@ class GradientThemeButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // TODO : Change Theme
+        context.read<ThemeController>().changeThemeMode();
       },
       child: Container(
         padding: EdgeInsets.all(14.sp),
@@ -22,7 +24,13 @@ class GradientThemeButton extends StatelessWidget {
             stops: [0.4, 1],
           ),
         ),
-        child: Icon(FontAwesomeIcons.moon, color: Colors.white, size: 18.sp),
+        child: Icon(
+          context.watch<ThemeController>().themeMode == ThemeMode.dark
+              ? Icons.wb_sunny_outlined
+              : FontAwesomeIcons.moon,
+          color: Colors.white,
+          size: 18.sp,
+        ),
       ),
     );
   }

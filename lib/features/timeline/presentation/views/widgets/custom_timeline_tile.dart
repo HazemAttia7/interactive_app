@@ -58,7 +58,8 @@ class CustomTimelineTile extends StatelessWidget {
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors:
-                          iconGradientBackColor ?? _getIconBackColor(enStatus),
+                          iconGradientBackColor ??
+                          _getIconBackColor(context, enStatus),
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                     ),
@@ -72,7 +73,10 @@ class CustomTimelineTile extends StatelessWidget {
                 ),
         ),
       ),
-      beforeLineStyle: LineStyle(color: Colors.black45, thickness: 2.sp),
+      beforeLineStyle: LineStyle(
+        color: Theme.of(context).hintColor,
+        thickness: 2.sp,
+      ),
       endChild: StaggeredAnimatedSlideItem(
         delay: delay ?? const Duration(milliseconds: 0),
         child: TimelineEndChild(
@@ -89,14 +93,17 @@ class CustomTimelineTile extends StatelessWidget {
     );
   }
 
-  List<Color> _getIconBackColor(enTimelineStatus status) {
+  List<Color> _getIconBackColor(BuildContext context, enTimelineStatus status) {
+    final bool isDark = Theme.of(context).brightness == Brightness.dark;
     switch (status) {
       case enTimelineStatus.done:
-        return AppColors.doneGradient;
+        return isDark ? AppColors.doneGradientDark : AppColors.doneGradient;
       case enTimelineStatus.pending:
-        return AppColors.pendingGradient;
+        return isDark
+            ? AppColors.pendingGradientDark
+            : AppColors.pendingGradient;
       case enTimelineStatus.active:
-        return AppColors.activeGradient;
+        return isDark ? AppColors.activeGradientDark : AppColors.activeGradient;
     }
   }
 

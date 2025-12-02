@@ -15,12 +15,15 @@ class ReorderableListViewItem extends StatelessWidget {
       margin: EdgeInsets.only(bottom: 8.sp),
       padding: EdgeInsets.all(16.sp),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Theme.of(context).colorScheme.surface,
         borderRadius: BorderRadius.circular(16.r),
-        border: Border.all(color: const Color(0xffE5E7EB)),
+        border: Border.all(
+          color: Theme.of(context).colorScheme.outline,
+          width: 1.sp,
+        ),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.shade300,
+            color: Theme.of(context).colorScheme.shadow,
             blurRadius: 16,
             spreadRadius: -5,
             offset: Offset(0, 10.sp),
@@ -33,7 +36,7 @@ class ReorderableListViewItem extends StatelessWidget {
           children: [
             Icon(
               FontAwesomeIcons.gripVertical,
-              color: Colors.grey,
+              color: Theme.of(context).hintColor,
               size: 14.sp,
             ),
             Gap(10.sp),
@@ -52,7 +55,10 @@ class ReorderableListViewItem extends StatelessWidget {
                   Text(item.text, style: TextStyle(fontSize: 14.sp)),
                   Text(
                     "Long press to drag",
-                    style: TextStyle(fontSize: 12.sp, color: Colors.black54),
+                    style: TextStyle(
+                      fontSize: 12.sp,
+                      color: Theme.of(context).hintColor,
+                    ),
                   ),
                 ],
               ),
